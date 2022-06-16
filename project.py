@@ -75,7 +75,7 @@ def draw():
     glEnd()
     #Bedroom Door
 
-    #LeftWall from Door
+    ##LeftWall from Door
     # glColor3f(0.9, 0.0, 0.5)
     # glBegin(GL_QUADS)
     # glVertex3f(-12, 0, 12)
@@ -248,7 +248,127 @@ def draw():
     glVertex3f(-1.8, 0.7, 0.3)
     glVertex3f(-9.15, 0.7, 0.3)
     glEnd()
+
+    #Dresser
+    glBegin(GL_QUADS)
+    #back of dresser
+    glColor3f(0.0, 0.0, 0.0)
+
+    glVertex3f(-1.6, 0.9, -1.5)
+    glVertex3f(-1.6, 2.5, -1.5)
+    glVertex3f(0.5, 2.5, -1.5)
+    glVertex3f(0.5, 0.9, -1.5)
+
+    #left Dresser
+    glColor3f(0.9, 0.9, 0.9)
+    glVertex3f(-1.6, 0.9, -1.5)
+    glVertex3f(-1.6, 2.5, -1.5)
+    glVertex3f(-1.6, 2.5, 1.5)
+    glVertex3f(-1.6, 0.9, 1.5)
+
+    #right of dresser
+    glVertex3f(0.5, 0.9, -1.5)
+    glVertex3f(0.5, 2.5, -1.5)
+    glVertex3f(0.5, 2.5, 1.5)
+    glVertex3f(0.5, 0.9, 1.5)
+
+    #front of dresser left
+    glVertex3f(-1.6, 0.9, 1.5)
+    glVertex3f(-1.6, 2.5, 1.5)
+    glVertex3f(-.5, 2.5, 1.5)
+    glVertex3f(-.5, 0.9, 1.5)
+
+    #front of dresser right
+
+    glVertex3f(-.6, 0.9, 1.5)
+    glVertex3f(-.6, 2.5, 1.5)
+    glVertex3f(.5, 2.5, 1.5)
+    glVertex3f(.5, 0.9, 1.5)
+
+
+    #upper of dresser
+    glVertex3f(-1.6, 2.5, 1.5)
+    glVertex3f(-1.6, 2.5, 1.5)
+    glVertex3f(0.5, 2.5, 1.5)
+    glVertex3f(0.5, 2.5, 1.5)
+
+
+    #floor of dresser
+    glVertex3f(-1.6, 2.5, 1.5)
+    glVertex3f(-1.6, 2.5, 1.5)
+    glVertex3f(0.5, 2.5, 1.5)
+    glVertex3f(0.5, 2.5, 1.5)
+
+
+
+    glEnd()
+
+
+    glBegin(GL_LINES)
+    glColor3f(0.0, 0.0, 0.0)
+    glVertex3f(-1.6, 0.9, 1.5)
+    glVertex3f(-1.6, 2.5, 1.5)
+
+    glVertex3f(-.5, 2.5, 1.5)
+    glVertex3f(-.5, 0.9, 1.5)
+
+    glVertex3f(-.6, 0.9, 1.5)
+    glVertex3f(-.6, 2.5, 1.5)
+    glVertex3f(.5, 2.5, 1.5)
+    glVertex3f(.5, 0.9, 1.5)
+
+    glVertex3f(-.6, 0.9, 1.5)
+    glVertex3f(-.6, 2.5, 1.5)
+    glVertex3f(.5, 2.5, 1.5)
+    glVertex3f(.5, 0.9, 1.5)
+
+    glEnd()
+
+    #mirror and dresser
+    glColor(0.2, 0.2, 0.2)
+    glBegin(GL_QUADS)
+
+    #side of dresser under mirror
+    glVertex3f(-12, 0, 5.5)
+    glVertex3f(-12, 1.5, 5.5)
+    glVertex3f(-10.5, 1.5, 5.5)
+    glVertex3f(-10.5, 0, 5.5)
+
+    #front of dresser under mirror
+    glVertex3f(-10.5, 0, 5.5)
+    glVertex3f(-10.5, 1.5, 5.5)
+    glVertex3f(-10.5, 1.5, 2.5)
+    glVertex3f(-10.5, 0, 2.5)
+
+    #back of dresser under mirror
+    glVertex3f(-12, 0, 5.5)
+    glVertex3f(-12, 1.5, 5.5)
+    glVertex3f(-12, 1.5, 2.5)
+    glVertex3f(-12, 0, 2.5)
+
+    #other side of dresser under mirror
+
+    glVertex3f(-12, 0, 2.5)
+    glVertex3f(-12, 1.5, 2.5)
+    glVertex3f(-10.5, 1.5, 2.5)
+    glVertex3f(-10.5, 0, 2.5)
+
+    #ceiling of dresser under mirror
+    glColor3f(0.1, 0.1, 0.1)
+    glVertex3f(-12, 1.5, 5.5)
+    glVertex3f(-12, 1.5, 5.5)
+    glVertex3f(-10.5, 1.5, 2.5)
+    glVertex3f(-10.5, 1.5, 2.5)
+
+    #floor of dresser above mirror
+    glVertex3f(-12, 0, 5.5)
+    glVertex3f(-12, 0, 5.5)
+    glVertex3f(-10.5, 0, 2.5)
+    glVertex3f(-10.5, 0, 2.5)
+    glEnd()
     glFlush()
+
+
 
 
 def main():
