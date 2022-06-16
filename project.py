@@ -123,57 +123,87 @@ def draw():
 
     glBegin(GL_QUADS)
     #back of kumsatn
-    glVertex3f(-1.5, 0.9, -1.5)
-    glVertex3f(-1.5, 5, -1.5)
-    glVertex3f(1.5, 5, -1.5)
     glVertex3f(1.5, 0.9, -1.5)
+    glVertex3f(1.5, 5, -1.5)
+    glVertex3f(4, 5, -1.5)
+    glVertex3f(4, 0.9, -1.5)
 
     #left of kumsatn
-    glVertex3f(-1.5, 0.9, -1.5)
-    glVertex3f(-1.5, 5, -1.5)
-    glVertex3f(-1.5, 5, 1.5)
-    glVertex3f(-1.5, 0.9, 1.5)
-    #right
     glVertex3f(1.5, 0.9, -1.5)
     glVertex3f(1.5, 5, -1.5)
     glVertex3f(1.5, 5, 1.5)
     glVertex3f(1.5, 0.9, 1.5)
-
+    #right
+    glVertex3f(4, 0.9, -1.5)
+    glVertex3f(4, 5, -1.5)
+    glVertex3f(4, 5, 1.5)
+    glVertex3f(4, 0.9, 1.5)
+    #
     #front
-    glVertex3f(-1.5, 0.9, 1.5)
-    glVertex3f(-1.5, 5, 1.5)
-    glVertex3f(1.5, 5, 1.5)
+    #frontleft
     glVertex3f(1.5, 0.9, 1.5)
-    glColor3f(1.0, 0.0, 0.0)
+    glVertex3f(1.5, 5, 1.5)
+    glVertex3f(2.75, 5, 1.5)
+    glVertex3f(2.75, 0.9, 1.5)
+    # glColor3f(1.0, 0.0, 0.0)
 
+    #front right
+    glVertex3f(2.8, 0.9, 1.5)
+    glVertex3f(2.8, 5, 1.5)
+    glVertex3f(4, 5, 1.5)
+    glVertex3f(4, 0.9, 1.5)
+
+    glVertex3f(1.5, 5, 0)
+    glVertex3f(1.5, 5, 1.5)
+    glVertex3f(4, 5, 0)
+    glVertex3f(4, 5, 1.5)
     glEnd()
 
     #Lines for kumsatn
     glBegin(GL_LINES)
     glColor3f(0.0, 0.0, 0.0)
     #left front
-    glVertex3f(-1.3, 0.8, 0.5)
-    glVertex3f(-1.3, 5.15, 0.5)
+    glVertex3f(1.8, 0.8, 0.6)
+    glVertex3f(1.8, 5.15, 0.6)
     #left back
-    glVertex3f(-1.3, 0.8, -2.6)
-    glVertex3f(-1.3, 5.15, -2.6)
+    glVertex3f(1.8, 0.8, -2.45)
+    glVertex3f(1.8, 5.15, -2.45)
+    #left middle
+    glVertex3f(3.155, 0.8, 0.6)
+    glVertex3f(3.155, 5.15, 0.6)
+    #right middle
+    glVertex3f(3.2, 0.8, 0.6)
+    glVertex3f(3.2, 5.15, 0.6)
+    # # rightmiddle
+    # glVertex3f(0.25, 0.8, 0.5)
+    # glVertex3f(0.25, 5.15, 0.5)
+    #floor left
+    glVertex3f(1.85, 0.8, 0.5)
+    glVertex3f(3.18, 0.8, 0.5)
+
+    # floor right
+    glVertex3f(3.25, 0.8, 0.5)
+    glVertex3f(4.55, 0.8, 0.5)
+    # #upper left
+    glVertex3f(1.85, 5.15, 0.5)
+    glVertex3f(3.18, 5.15, 0.5)
+    # #upper right
+    glVertex3f(3.25, 5.15, 0.5)
+    glVertex3f(4.55, 5.15, 0.5)
     #right front
-    glVertex3f(1.9, 0.8, 0.5)
-    glVertex3f(1.9, 5.15, 0.5)
-    #middle
-    glVertex3f(0.25, 0.8, 0.5)
-    glVertex3f(0.25, 5.15, 0.5)
-    #floor
-    glVertex3f(-1.3, 0.8, 0.5)
-    glVertex3f(1.9, 0.8, 0.5)
-    #upper
-    glVertex3f(-1.3, 5.15, 0.5)
-    glVertex3f(1.9, 5.15, 0.5)
-    #upperleft
-    glVertex3f(-1.3, 5.15, -2.6)
-    glVertex3f(-1.3, 5.15, 0.5)
+    glVertex3f(4.48, 0.8, 0.6)
+    glVertex3f(4.48, 5.15, 0.6)
+
+    #upper left left
+    glVertex3f(1.85, 5.15, -2.45)
+    glVertex3f(1.85, 5.15, 0.6)
+
+    glVertex3f(1.85, 0.8, -2.45)
+    glVertex3f(1.85, 0.8, 0.6)
     glEnd()
-    glFlush()
+
+
+
     glColor3f(0.5, 0.5, 0.5)
     # glPushMatrix()
     # glTranslatef(0.1, 2.5, 0.5)
@@ -181,6 +211,44 @@ def draw():
     # glutSolidTorus(0.03, 0.1, 100, 100)
     # glPopMatrix()
 
+    #Add Alga
+    glColor3f(0.3, 0.2, 0.2)
+    glBegin(GL_QUADS)
+    #Back of Alga
+    glVertex3f(-10, 0, -10)
+    glVertex3f(-10, 2.2, -10)
+    glVertex3f(-1, 2.2, -10)
+    glVertex3f(-1, 0, -10)
+
+    #Left of alga
+    glColor3f(0.1, 0.5, 0.5)
+    glVertex3f(-9.85, 0, -10)
+    glVertex3f(-9.85, 0.8, -10)
+    glVertex3f(-9, 0.8, 1)
+    glVertex3f(-9, 0, 1)
+
+    #right of alga
+    glColor3f(0.8, 0.5, 0.5)
+    glVertex3f(-1.15, 0, -10)
+    glVertex3f(-1.15, 0.8, -10)
+    glVertex3f(-1.95, 0.8, 1)
+    glVertex3f(-1.95, 0, 1)
+    #front of alga
+    glColor3f(0.1, 0.2, 0.3)
+    glVertex3f(-9, 0, 1)
+    glVertex3f(-9, 0.8, 1)
+    glVertex3f(-1.95, 0.8, 1)
+    glVertex3f(-1.95, 0, 1)
+
+    #Frash Adding
+    glColor3f(0.0, 0.0, 0.0)
+
+    glVertex3f(-9.90, 0.9, -10)
+    glVertex3f(-1.25, 0.9, -10)
+    glVertex3f(-1.8, 0.7, 0.3)
+    glVertex3f(-9.15, 0.7, 0.3)
+    glEnd()
+    glFlush()
 
 
 def main():
