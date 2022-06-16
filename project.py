@@ -12,7 +12,7 @@ import pyrr
 
 def init():
     pygame.init()
-    display = (800, 800)
+    display = (1200, 800)
     pygame.display.set_mode(display, DOUBLEBUF | OPENGL)
     glClearColor(.30, 0.20, 0.20, 1.0)
     # glViewport(0, 0, 500, 500)
@@ -42,84 +42,144 @@ def draw():
     #Wall For bedroom
     glColor3f(0.2, 0.6, 0.5)
     glBegin(GL_QUADS)
-    glVertex3f(-10, 0, -10)
-    glVertex3f(-10, 8, -10)
-    glVertex3f(10, 8, -10)
-    glVertex3f(10, 0, -10)
+    glVertex3f(-12, 0, -12)
+    glVertex3f(-12, 10, -12)
+    glVertex3f(12, 10, -12)
+    glVertex3f(12, 0, -12)
     glEnd()
 
     #Another bedroom wall
     glColor3f(0.2, 0.8, 0.9)
     glBegin(GL_QUADS)
-    glVertex3f(-10, 0, -10)
-    glVertex3f(-10, 8, -10)
-    glVertex3f(-10, 8, 10)
-    glVertex3f(-10, 0, 10)
+    glVertex3f(-12, 0, -12)
+    glVertex3f(-12, 10, -12)
+    glVertex3f(-12, 10, 12)
+    glVertex3f(-12, 0, 12)
     glEnd()
 
+    #yet another wall
+    glColor3f(0.2, 0.8, 0.9)
+    glBegin(GL_QUADS)
+    glVertex3f(12, 0, -12)
+    glVertex3f(12, 10, -12)
+    glVertex3f(12, 10, 12)
+    glVertex3f(12, 0, 12)
+    glEnd()
     #Bedroom Ceiling
     glColor3f(0.9, 0.6, 0.5)
     glBegin(GL_QUADS)
-    glVertex3f(-10, 8, -10)
-    glVertex3f(10, 8, -10)
-    glVertex3f(10, 8, 10)
-    glVertex3f(-10, 8, 10)
+    glVertex3f(-12, 10, -12)
+    glVertex3f(12, 10, -12)
+    glVertex3f(12, 10, 12)
+    glVertex3f(-12, 10, 12)
     glEnd()
     #Bedroom Door
 
     #LeftWall from Door
-    glColor3f(0.9, 0.0, 0.5)
-    glBegin(GL_QUADS)
-    glVertex3f(-10, 0, 10)
-    glVertex3f(-10, 8, 10)
-    glVertex3f(-6, 8, 10)
-    glVertex3f(-6, 0, 10)
-    glEnd()
-
-    #RightWall from Door
-    glColor3f(0.9, 0.9, 0.5)
-    glBegin(GL_QUADS)
-    glVertex3f(-3, 0, 10)
-    glVertex3f(-3, 8, 10)
-    glVertex3f(10, 8, 10)
-    glVertex3f(10, 0, 10)
-    glEnd()
-
-    glColor3f(0.9, 0.9, 0.7)
-    glBegin(GL_QUADS)
-    glVertex3f(-3, 8, 10)
-    glVertex3f(-3, 6, 10)
-    glVertex3f(-6, 6, 10)
-    glVertex3f(-6, 8, 10)
-    glEnd()
-
-    #Lines for lining the door
-    glColor3f(0.3, 0.9, 0.7)
-    glLineWidth(30)
-    glBegin(GL_LINES)
-    glVertex3f(-6, 5, 10)
-    glVertex3f(-3, 5, 10)
-    glEnd()
-
-    glBegin(GL_LINES)
-    glVertex3f(-6, 5, 10)
-    glVertex3f(-6, 0, 10)
-    glEnd()
-
-    glBegin(GL_LINES)
-    glVertex3f(-3, 0, 10)
-    glVertex3f(-3, 5, 10)
-    glEnd()
+    # glColor3f(0.9, 0.0, 0.5)
+    # glBegin(GL_QUADS)
+    # glVertex3f(-12, 0, 12)
+    # glVertex3f(-12, 10, 12)
+    # glVertex3f(-8, 10, 12)
+    # glVertex3f(-8, 0, 12)
+    # glEnd()
+    #
+    # #RightWall from Door
+    # glColor3f(0.9, 0.9, 0.5)
+    # glBegin(GL_QUADS)
+    # glVertex3f(-6, 0, 12)
+    # glVertex3f(-6, 8, 12)
+    # glVertex3f(12, 8, 12)
+    # glVertex3f(12, 0, 12)
+    # glEnd()
+    #
+    # glColor3f(0.9, 0.9, 0.7)
+    # glBegin(GL_QUADS)
+    # glVertex3f(-6, 10, 12)
+    # glVertex3f(-6, 8, 12)
+    # glVertex3f(-8, 10, 12)
+    # glVertex3f(-8, 10, 12)
+    # glEnd()
+    #
+    # #Lines for lining the door
+    # glColor3f(0.3, 0.9, 0.7)
+    #
+    # glBegin(GL_LINES)
+    # glVertex3f(-6, 5, 12)
+    # glVertex3f(-3, 5, 12)
+    # glEnd()
+    #
+    # glBegin(GL_LINES)
+    # glVertex3f(-6, 5, 12)
+    # glVertex3f(-6, 0, 12)
+    # glEnd()
+    #
+    # glBegin(GL_LINES)
+    # glVertex3f(-3, 0, 12)
+    # glVertex3f(-3, 5, 12)
+    # glEnd()
 
     #drawBed
 
-    # glBegin(GL_QUADS)
-    # glVertex3f(-2, -0.2, 2)
-    # glVertex3f(2, -0.2, 2)
-    # glVertex3f(2, 0.2, 2)
-    # glVertex3f(-2, 0.2, 2)
-    # glEnd()
+    glBegin(GL_QUADS)
+    #back of kumsatn
+    glVertex3f(-1.5, 0.9, -1.5)
+    glVertex3f(-1.5, 5, -1.5)
+    glVertex3f(1.5, 5, -1.5)
+    glVertex3f(1.5, 0.9, -1.5)
+
+    #left of kumsatn
+    glVertex3f(-1.5, 0.9, -1.5)
+    glVertex3f(-1.5, 5, -1.5)
+    glVertex3f(-1.5, 5, 1.5)
+    glVertex3f(-1.5, 0.9, 1.5)
+    #right
+    glVertex3f(1.5, 0.9, -1.5)
+    glVertex3f(1.5, 5, -1.5)
+    glVertex3f(1.5, 5, 1.5)
+    glVertex3f(1.5, 0.9, 1.5)
+
+    #front
+    glVertex3f(-1.5, 0.9, 1.5)
+    glVertex3f(-1.5, 5, 1.5)
+    glVertex3f(1.5, 5, 1.5)
+    glVertex3f(1.5, 0.9, 1.5)
+    glColor3f(1.0, 0.0, 0.0)
+
+    glEnd()
+
+    #Lines for kumsatn
+    glBegin(GL_LINES)
+    glColor3f(0.0, 0.0, 0.0)
+    #left front
+    glVertex3f(-1.3, 0.8, 0.5)
+    glVertex3f(-1.3, 5.15, 0.5)
+    #left back
+    glVertex3f(-1.3, 0.8, -2.6)
+    glVertex3f(-1.3, 5.15, -2.6)
+    #right front
+    glVertex3f(1.9, 0.8, 0.5)
+    glVertex3f(1.9, 5.15, 0.5)
+    #middle
+    glVertex3f(0.25, 0.8, 0.5)
+    glVertex3f(0.25, 5.15, 0.5)
+    #floor
+    glVertex3f(-1.3, 0.8, 0.5)
+    glVertex3f(1.9, 0.8, 0.5)
+    #upper
+    glVertex3f(-1.3, 5.15, 0.5)
+    glVertex3f(1.9, 5.15, 0.5)
+    #upperleft
+    glVertex3f(-1.3, 5.15, -2.6)
+    glVertex3f(-1.3, 5.15, 0.5)
+    glEnd()
     glFlush()
+    glColor3f(0.5, 0.5, 0.5)
+    # glPushMatrix()
+    # glTranslatef(0.1, 2.5, 0.5)
+    # glRotatef(90.0, 0.0, 1.0, 0.0)
+    # glutSolidTorus(0.03, 0.1, 100, 100)
+    # glPopMatrix()
 
 
 
