@@ -9,8 +9,8 @@ from objloader import *
 
 pygame.init()
 viewport = (1000,800)
-hx = viewport[0]
-hy = viewport[1]
+hx = viewport[0]/2
+hy = viewport[1]/2
 srf = pygame.display.set_mode(viewport, OPENGL | DOUBLEBUF)
 
 glLightfv(GL_LIGHT0, GL_POSITION,  (-40, 200, 100, 0.0))
@@ -29,7 +29,7 @@ clock = pygame.time.Clock()
 glMatrixMode(GL_PROJECTION)
 glLoadIdentity()
 width, height = viewport
-gluPerspective(45.0, width/float(height), 1, 100.0)
+gluPerspective(90.0, width/float(height), 1, 100.0)
 glEnable(GL_DEPTH_TEST)
 glMatrixMode(GL_MODELVIEW)
 
