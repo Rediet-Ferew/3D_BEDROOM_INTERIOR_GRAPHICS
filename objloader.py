@@ -31,12 +31,12 @@ def MTL(filename='bedroom_design.mtl'):
             mtl[values[0]] = list(map(float, values[1:]))
     return contents
 class FaceGroup(object):
-    def init(self):
+    def __init__(self):
         self.indices = []
         self.material_name = ""
 class OBJ:
     
-    def init(self, filename):
+    def __init__(self, filename):
         self.vertices = []
         self.tex_coord = []
         self.normal = []
@@ -78,7 +78,7 @@ class OBJ:
                     v1, t1, n1 = values.split('/')
                     indices = (int(v1) - 1, int(t1) - 1, int(n1) - 1)
                 current_face_group.indices.append(indices)
-
+ 
         gl_list = glGenLists(1)
         glNewList(gl_list, GL_COMPILE)
         glEnable(GL_TEXTURE_2D)
